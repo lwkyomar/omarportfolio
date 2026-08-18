@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="az" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin Panel | İbrahimli Ömər</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <section class="login-screen" id="loginScreen">
+    <form class="login-card admin-form" id="loginForm">
+      <span class="eyebrow">Admin panel</span>
+      <h1 style="font-size:2.2rem">Giriş</h1>
+      <p class="small-note">Admin şifrəsi server tərəfində qorunur. GitHub-a açıq parol yüklənmir.</p>
+      <label>İstifadəçi adı<input id="username" autocomplete="username" required /></label>
+      <label>Şifrə<input id="password" type="password" autocomplete="current-password" required /></label>
+      <button class="btn primary" type="submit">Daxil ol</button>
+      <p class="form-status" id="loginStatus"></p>
+    </form>
+  </section>
+
+  <section class="admin-shell hidden" id="adminShell">
+    <aside class="admin-sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">İÖ</span>
+        <span>Sayta bax</span>
+      </a>
+      <nav aria-label="Admin menyu">
+        <a href="#general">Ümumi mətnlər</a>
+        <a href="#servicesAdmin">Xidmətlər</a>
+        <a href="#portfolioAdmin">Portfolio</a>
+        <a href="#faqAdmin">FAQ</a>
+        <a href="#settings">Şifrə</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-top">
+        <div>
+          <span class="eyebrow">İdarəetmə</span>
+          <h2>Portfolio sayt paneli</h2>
+        </div>
+        <div class="header-actions">
+          <button class="ghost-button" id="themeToggle" type="button">Tema</button>
+          <button class="danger-button" id="logoutBtn" type="button">Çıxış</button>
+        </div>
+      </div>
+
+      <section class="admin-panel" id="general">
+        <h3>Ümumi mətnlər və sosial bağlantılar</h3>
+        <div class="editor-grid">
+          <label>Ad Soyad<input id="siteName" /></label>
+          <label>Peşə<input id="siteProfession" /></label>
+          <label>WhatsApp<input id="contactWhatsapp" /></label>
+          <label>Telegram<input id="contactTelegram" /></label>
+          <label>Instagram<input id="contactInstagram" /></label>
+          <label>E-poçt<input id="contactEmail" type="email" /></label>
+        </div>
+        <div class="admin-form" style="margin-top:1rem">
+          <label>Qısa təqdimat<textarea id="heroTextInput" rows="3"></textarea></label>
+          <label>Haqqımda mətni<textarea id="aboutTextInput" rows="7"></textarea></label>
+          <label>Profil şəkli<input id="profileImageInput" type="file" accept="image/*" /></label>
+        </div>
+      </section>
+
+      <section class="admin-panel" id="servicesAdmin">
+        <div class="admin-top">
+          <h3>Xidmətlər və qiymətlər</h3>
+          <button class="ghost-button" id="addService" type="button">Xidmət əlavə et</button>
+        </div>
+        <div class="list-editor" id="servicesEditor"></div>
+      </section>
+
+      <section class="admin-panel" id="portfolioAdmin">
+        <div class="admin-top">
+          <div>
+            <h3>Portfolio işləri</h3>
+            <p class="small-note">100+ iş əlavə etmək mümkündür. Şəkillər brauzerin lokal yaddaşında saxlanılır.</p>
+          </div>
+          <button class="ghost-button" id="addWork" type="button">İş əlavə et</button>
+        </div>
+        <div class="list-editor" id="portfolioEditor"></div>
+      </section>
+
+      <section class="admin-panel" id="faqAdmin">
+        <div class="admin-top">
+          <h3>FAQ</h3>
+          <button class="ghost-button" id="addFaq" type="button">Sual əlavə et</button>
+        </div>
+        <div class="list-editor" id="faqEditor"></div>
+      </section>
+
+      <section class="admin-panel" id="settings">
+        <h3>Şifrə dəyişmə</h3>
+        <div class="editor-grid">
+          <label>Köhnə şifrə<input id="oldPassword" type="password" autocomplete="current-password" /></label>
+          <label>Yeni şifrə<input id="newPassword" type="password" autocomplete="new-password" /></label>
+        </div>
+        <button class="btn primary" id="changePassword" type="button" style="margin-top:1rem">Şifrəni dəyiş</button>
+      </section>
+
+      <div class="admin-top">
+        <button class="btn primary" id="saveAll" type="button">Bütün dəyişiklikləri yadda saxla</button>
+        <button class="danger-button" id="resetData" type="button">Məlumatları sıfırla</button>
+      </div>
+      <p class="status" id="saveStatus"></p>
+    </main>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

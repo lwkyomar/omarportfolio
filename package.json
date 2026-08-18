@@ -1,0 +1,16 @@
+{
+  "name": "ibrahimli-omer-portfolio",
+  "version": "1.0.0",
+  "description": "İbrahimli Ömər üçün portfolio saytı və admin panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "qrafik-dizayn",
+    "azerbaijan"
+  ],
+  "author": "İbrahimli Ömər",
+  "license": "UNLICENSED"
+}

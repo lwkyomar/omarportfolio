@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="az" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="İbrahimli Ömər - TopAz, Lalafo, marketplace, banner, loqo, vizit kartı və reklam materialları üzrə qrafik dizayner portfolio saytı." />
+  <meta name="keywords" content="qrafik dizayner, TopAz kart dizaynı, Lalafo kart dizaynı, banner dizaynı, loqo dizaynı, vizit kartı, flayer, Azərbaycan dizayner" />
+  <meta name="author" content="İbrahimli Ömər" />
+  <meta property="og:title" content="İbrahimli Ömər | Qrafik Dizayner" />
+  <meta property="og:description" content="Marketplace kartları, bannerlər, loqolar və reklam materialları üçün premium dizayn xidməti." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#101820" />
+  <title>İbrahimli Ömər | Qrafik Dizayner Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "İbrahimli Ömər",
+      "jobTitle": "Qrafik Dizayner",
+      "knowsAbout": ["TopAz məhsul kartları", "Lalafo məhsul kartları", "Marketplace dizaynları", "Banner dizaynları", "Loqo dizaynları"],
+      "sameAs": ["https://t.me/taffmvp", "https://instagram.com/taffomvp"]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Ana səhifə">
+      <span class="brand-mark">İÖ</span>
+      <span>İbrahimli Ömər</span>
+    </a>
+    <nav class="main-nav" aria-label="Əsas menyu">
+      <a href="#about">Haqqımda</a>
+      <a href="#services">Xidmətlər</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Rəylər</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Temanı dəyiş">
+        <span aria-hidden="true">◐</span>
+      </button>
+      <a class="admin-link" href="admin.html">Admin</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-media reveal">
+        <div class="profile-frame">
+          <img id="profileImage" src="" alt="İbrahimli Ömər profil şəkli" />
+          <div class="profile-placeholder" id="profilePlaceholder">Profil şəkli</div>
+        </div>
+        <div class="trust-card">
+          <strong id="trustTitle">1 il təcrübə</strong>
+          <span id="trustDesc">Marketplace və reklam dizaynlarında fokuslanmış yanaşma</span>
+        </div>
+      </div>
+      <div class="hero-content reveal">
+        <span class="eyebrow">Premium qrafik dizayn xidmətləri</span>
+        <h1 id="heroName">İbrahimli Ömər</h1>
+        <p class="profession" id="heroProfession">Qrafik Dizayner</p>
+        <p class="hero-copy" id="heroText">TopAz, Lalafo və marketplace satışları üçün diqqət çəkən məhsul kartları, bannerlər və reklam materialları hazırlayıram.</p>
+        <div class="hero-actions">
+          <a class="btn primary" id="primaryContact" target="_blank" rel="noopener">Mənimlə əlaqə saxla</a>
+          <a class="btn social whatsapp" id="whatsappHero" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn social telegram" id="telegramHero" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn social instagram" id="instagramHero" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-band" id="statsBand" aria-label="Nəticələr"></section>
+
+    <section class="section split" id="about">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Haqqımda</span>
+        <h2>Etibarlı, kreativ və nəticəyə fokuslanan dizayn tərəfdaşı</h2>
+      </div>
+      <div class="text-panel reveal">
+        <p id="aboutText"></p>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading centered reveal">
+        <span class="eyebrow">Xidmətlər</span>
+        <h2>Satışı və brend görünüşünü gücləndirən dizayn həlləri</h2>
+      </div>
+      <div class="card-grid" id="servicesGrid"></div>
+    </section>
+
+    <section class="section portfolio-section" id="portfolio">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Seçilmiş iş nümunələri</h2>
+      </div>
+      <div class="portfolio-filters-container reveal">
+        <div class="portfolio-filters" id="portfolioFilters"></div>
+      </div>
+      <div class="carousel-controls reveal">
+        <button class="icon-button" id="prevWork" type="button" aria-label="Əvvəlki iş">‹</button>
+        <button class="icon-button" id="nextWork" type="button" aria-label="Növbəti iş">›</button>
+      </div>
+      <div class="portfolio-track" id="portfolioTrack" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="section-heading centered reveal">
+        <span class="eyebrow">Üstünlüklər</span>
+        <h2>Niyə məni seçməlisiniz?</h2>
+      </div>
+      <div class="benefits" id="benefitsGrid"></div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="section-heading centered reveal">
+        <span class="eyebrow">Rəylər</span>
+        <h2>Müştərilərimin mənim haqqımda fikirləri</h2>
+      </div>
+      <div class="reviews-grid" id="reviewsGrid"></div>
+    </section>
+
+    <section class="section split" id="faq">
+      <div class="section-heading reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Ən çox verilən suallar</h2>
+      </div>
+      <div class="faq-list reveal" id="faqList"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> İbrahimli Ömər. Bütün hüquqlar qorunur.</span>
+    <a href="#top">Yuxarı qayıt</a>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
