@@ -123,11 +123,7 @@ function bindAdminActions() {
     renderFaqEditor();
   });
 
-  document.getElementById("addReview").addEventListener("click", () => {
-    if (!adminData.reviews) adminData.reviews = [];
-    adminData.reviews.push({ name: "Müştəri adı", project: "Layihə adı", text: "Rəy mətni", rating: 5 });
-    renderReviewsEditor();
-  });
+
 
   document.getElementById("saveAll").addEventListener("click", async () => {
     collectGeneralFields();
@@ -220,7 +216,6 @@ function renderAllEditors() {
   renderPortfolioEditor();
   renderBenefitsEditor();
   renderFaqEditor();
-  renderReviewsEditor();
 }
 
 function renderServicesEditor() {
@@ -412,30 +407,7 @@ function renderBenefitsEditor() {
   });
 }
 
-function renderReviewsEditor() {
-  if (!adminData.reviews) adminData.reviews = [];
-  document.getElementById("reviewsEditor").innerHTML = adminData.reviews.map((review, index) => `
-    <article class="editor-item">
-      <div class="editor-grid">
-        <label>Müştəri Adı<input value="${escapeAttr(review.name)}" data-review="${index}" data-field="name" /></label>
-        <label>Layihə/Rol<input value="${escapeAttr(review.project)}" data-review="${index}" data-field="project" /></label>
-        <label>Ulduz (1-5)<input type="number" min="1" max="5" value="${escapeAttr(review.rating)}" data-review="${index}" data-field="rating" /></label>
-      </div>
-      <label>Rəy Mətni<textarea rows="3" data-review="${index}" data-field="text">${escapeHtml(review.text)}</textarea></label>
-      <div class="item-actions">
-        <button class="danger-button" type="button" data-delete-review="${index}">Sil</button>
-      </div>
-    </article>
-  `).join("");
 
-  bindFieldUpdates("review", adminData.reviews);
-  document.querySelectorAll("[data-delete-review]").forEach((button) => {
-    button.addEventListener("click", () => {
-      adminData.reviews.splice(Number(button.dataset.deleteReview), 1);
-      renderReviewsEditor();
-    });
-  });
-}
 
 function downloadDataFile() {
   collectGeneralFields();

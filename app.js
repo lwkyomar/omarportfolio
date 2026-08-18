@@ -18,7 +18,7 @@ async function init() {
   renderPortfolioFilters();
   renderPortfolio();
   renderBenefits();
-  renderReviews();
+  renderFaq();
   bindEvents();
   revealOnScroll();
 }
